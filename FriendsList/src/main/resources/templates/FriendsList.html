@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Server programming HH2022</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h1 th:text="'My friends:'"></h1>
+
+		<form action="#" th:action="@{/friend}">
+		<input type="text" th:name="name"/>
+		<input type="submit" value="Submit" />
+	</form>
+
+	<p th:text="'Listed friends:'" />
+
+	<table>
+		<tr th:each="friend : ${friends}">
+			<td th:text="${friend}"></td>
+		</tr>
+	</table>
+
+	
+	
+</body>
+</html>
